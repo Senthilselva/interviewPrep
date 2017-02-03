@@ -1,6 +1,28 @@
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
 
+
+//*******************************
+//Better Solution - still fails
+//**************************
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
+
+function solution(A) {
+    // write your code in JavaScript (Node.js 6.4.0)
+   //if empty array
+    if (A.length == 0) return 1;
+    
+     A= A.sort();
+    // console.log(A);
+    for(var i = 0; i < A.length ; i++) {
+        if (A[i] == i+2) return i+1
+    }
+    return i+1;
+    
+}
+
+
 //***************************************************
 //Not Correct should retake the test
 //*****************************************************
