@@ -40,7 +40,9 @@ function solution(A) {
     if(A.length == 1 && A[0] == 1) return 2;
     if(A.length == 1 && A[0] <= 0) return 1;
     //sort the array
-    A= A.sort();
+    A.sort(function(a,b){
+        return (a-b);
+        });
     
     //find the lowest number in the array
     var lowestNum = Math.min.apply( Math, A );
