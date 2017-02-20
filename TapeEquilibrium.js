@@ -54,15 +54,11 @@ function solution(A) {
     
     var diffArr =[];
     for(var i = 1; i< A.length; i++){
-         //slice the array right at i
-         var frontArr = A.slice(0,i)
+        //slice the array right at i
+        var frontArr = A.slice(0,i)
         var backArr = A.slice(i)
-     
-  //    console.log(frontArr);
-//        console.log(backArr);
-    
-    // find the sum of both arrays
-    
+        
+        // find the sum of both arrays
         var frontArrSum = frontArr.reduce(function(a, b) {
                             return a + b;
                         }, 0);
@@ -71,15 +67,11 @@ function solution(A) {
                             return a + b;
                         }, 0);
                         
-                        
-      //console.log(frontArrSum);
-        //console.log(backArrSum);
-                        
         //find the diff and store in new array
         diffArr.push(Math.abs(frontArrSum - backArrSum));
     
     }
-    //console.log(diffArr);
+    
     //return the min val of array
     return Math.min.apply( Math, diffArr );
 }
