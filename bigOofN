@@ -1,0 +1,90 @@
+//sometimes linear, sometimes constant
+    //any map function 
+
+    //constant
+        function dontNameFunctionsLikeThis(n){
+            var list = [];
+            for(var i=0; i<10; i++){
+                list.push(i*n);
+            }
+
+            return list;
+        }
+
+        |--input--|---units of work--
+
+        4               |    10
+        5               |    10
+        10              |    10
+        1000            |    10
+
+    //linear
+        function dontNameFunctionsLikeThis(n){
+            var list = [];
+            for(var i=0; i<n; i++){
+                list.push(i);
+            }
+
+            return list;
+        }
+
+        |--input--|---units of work--
+
+        4               |    4
+        5               |    5
+        10              |    10
+        1000            |    1000
+
+
+//linear
+    function countA(str){
+        var countA = 0;
+
+        for (var i=0; i<str.length; i++){
+            if (str[i].toLowerCase() == 'a') countA++;
+        }
+
+        return countA;
+    }
+
+    |--input--|---units of work--
+
+    "apple"               |    5
+    "missippisiii"               |    12
+    "snack"              |    5
+    snake            |    5
+
+    function fib(n){
+        var fibList = [0, 1];
+        for (var i=1; i<=n-2; i++){
+            var nextNum = fibList[i] + fibList[i-1];
+            fibList.push(nextNum);
+        }
+
+        return fibList;
+    }
+
+    |--input--|---units of work--
+
+    5               |    3
+    10              |    8
+    100             |    98
+    1000            |    998
+
+    O(n-2) which is approximately O(n)
+
+    function halfTheNumsInIt(arr){
+        var halfArr = [];
+        for (var i=0; i<arr.length; i++){
+            halfArr.push(arr[i]/2);
+        }
+
+        return halfArr;
+    }
+
+    |--input--|---units of work--
+
+    5               |    5
+    10              |    10
+    100             |    100
+    1000            |    1000

@@ -1,0 +1,21 @@
+var reverse= function(string){
+	var arrString = string.split("");
+	var  j = arrString.length -1;
+	var newArrString = [];
+	for(var i =arrString.length-1; i >= 0 ; i--){
+		newArrString.push( arrString[i]);
+	}
+
+	return newArrString.join("");
+}
+
+function reverseString(str){
+    var strReverse="";
+
+    for (var i=str.length-1; i>=0; i--){
+        strReverse += str[i];
+    }
+
+    return strReverse;
+}
+

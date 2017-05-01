@@ -3,8 +3,8 @@ var nightmare = Nightmare({ show: true });
 
 nightmare
   .goto('http://getbootstrap.com/css/')
-  // // .click('ul li ')
-  // // .wait('#main')
+  .click('h2')
+   // // .wait('#main')
   // // .evaluate(function () {
   // //   return document.querySelector('#main .searchCenterMiddle li a').href
   // })

@@ -44,3 +44,25 @@ expected worst-case time complexity is O(log(N));
 expected worst-case space complexity is O(1).
 
 */
+
+/* 100 % */
+function solution(N) {
+    // write your code in JavaScript (Node.js 6.4.0)
+    var binN = (N >>> 0).toString(2)
+    let maxCount = 0;
+    let count =0;
+    binN = binN.split("");
+    //console.log(binN);
+    
+    for(let i=0; i < binN.length; i++){
+       
+        if(binN[i] == 1){
+            if (count > maxCount) maxCount = count;
+            count = 0;
+        }
+        else {
+            count++;
+        }
+    }
+    return maxCount;
+}

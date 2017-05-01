@@ -45,3 +45,20 @@ function solution(X, Y, D) {
     
     return totalJump
 }
+
+function solution(X, Y, D) {
+    // write your code in JavaScript (Node.js 6.4.0)
+    var frogPos = X;
+    var jumpCount = 0;
+    // while( frogPos < Y){
+    //     frogPos += D;
+    //     jumpCount++;
+    // }
+    //console.log(jumpCount); 
+    var distance = Y - X;
+    //console.log(distance);
+    jumpCount  = Math.floor(distance/D) 
+    if (distance % D > 0 ) jumpCount++;
+    //console.log(jumpCount);
+    return jumpCount;
+}

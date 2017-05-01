@@ -60,3 +60,14 @@ function solution(A) {
      //add the length of the array to the lowest number all the other number are in array
     return  lowestNum+ Array.length
 }
+
+
+
+function solution(A) {
+    // write your code in JavaScript (Node.js 6.4.0)
+    var maxNum = Math.max(...A);
+    if(maxNum <= 0) return 1;
+    for(var i =1; i <= maxNum+1; i++){
+       if(A.indexOf(i) < 0) return i;
+    }
+}

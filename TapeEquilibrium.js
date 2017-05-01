@@ -50,6 +50,33 @@ Elements of input arrays can be modified.
 
 function solution(A) {
     // write your code in JavaScript (Node.js 6.4.0)
+    var rightSum = A.reduce( (a,b) => a+b);
+   var leftSum = 0;
+   var smallnumber = Math.abs(rightSum);
+   
+   for(i = 0; i < A.length; i++){
+       rightSum -= A[i];
+       leftSum += A[i];
+       var temp = Math.abs(leftSum - rightSum);
+       //console.log(temp);
+       if( temp < smallnumber) smallnumber = temp;
+   }
+   
+  // console.log(smallnumber);
+   return smallnumber;
+       
+}
+
+
+
+
+
+
+
+
+
+function solution(A) {
+    // write your code in JavaScript (Node.js 6.4.0)
     if(A.length == 0) return 0;
     
     var diffArr =[];

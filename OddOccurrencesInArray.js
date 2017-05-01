@@ -73,3 +73,28 @@ function solution(A) {
 console.log(qtts)
 
 }
+
+//using recursion
+
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
+
+function solution(A) {
+    // write your code in JavaScript (Node.js 6.4.0)
+   // console.log(" line 6    " + A);
+    let num = A[0];
+    A.splice(0,1);
+    let pos =  A.indexOf(num);
+    //console.log(A);
+    //console.log(pos);
+    if( pos < 0) {
+        // console.log(num)
+        return num;
+    }
+    
+    A.splice(pos,1);
+     return solution(A);
+    
+        
+}
+Analysis summary
